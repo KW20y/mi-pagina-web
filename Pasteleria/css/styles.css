@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 4px #000;
+}
+
+header img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lobster', cursive; /* Nueva tipografía para los enlaces de navegación */
+    font-size: 18px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.opcion {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    text-shadow: 1px 1px 2px #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.opcion:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+.opcion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#tortas::before {
+    background-image: url('images/torta_chocolate.jpg');
+}
+
+#galletas::before {
+    background-image: url('images/galletas.jpg');
+}
+
+#gelatinas::before {
+    background-image: url('images/gelatinas.jpg');
+}
+
+#yogurt::before {
+    background-image: url('images/yogurt.jpg');
+}
+
+.opcion:hover::before {
+    opacity: 0.3;
+}
+
+.imagen-previsualizacion {
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.imagen-previsualizacion img {
+    max-width: 150%; /* Incrementa el tamaño de la imagen al 150% del tamaño original */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.subopciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.producto img {
+    max-width: 200px; /* Ajusta este valor según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center; /* Centra los logos horizontalmente */
+    align-items: center;
+    gap: 1px; /* Espacio entre los logos */
+}
+
+.social-logo {
+    width: 20%; /* Ajusta el tamaño de los logos al 5% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-around; /* Distribuye las columnas equitativamente */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten si la pantalla es pequeña */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.contacto .columna {
+    flex: 1; /* Cada columna ocupa la misma cantidad de espacio */
+    min-width: 200px; /* Ancho mínimo para las columnas */
+}
